@@ -3,7 +3,7 @@ on: push
 
 jobs:
   build:
-    name: Buidl and Test
+    name: Build and Test
     runs-on: ubuntu-22.04
     permissions:
       contents: read
@@ -17,7 +17,7 @@ jobs:
           distribution: temurin
           java-version: 21
           cache:  gradle
-      - name: Code vulneraability scanning
+      - name: Code vulnerability scanning
         uses: anchore/scan-action@v3
         id: scan
         with:
